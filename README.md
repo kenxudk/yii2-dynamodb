@@ -12,11 +12,11 @@
 	        'key'=>"",
 	        'secret'=>"",
 	    ],
- #simple use
+ # simple use
  
- ###add
+ ### add
     $result = Dynamodb::table($table_name)->insert($data);
- ###update
+ ### update
     $expressValue = $updata = $expressName = [];
     $i = 0;
     foreach ($up_arr as $key => $value) {
@@ -29,7 +29,7 @@
     }
      $result = KmDynamodb::table($table_name)->expressValue($expressValue)->kwhere(['fid'=>$data['fid']])->expressName($expressName)->update($updata);
 
-###select
+### select
 #### Get multiples with the primary key (batchGetItem)
         $keys = [];
         foreach ($feed_id_list as $feed_id) {
@@ -42,5 +42,5 @@
      Dynamodb::table(self::$comment_name,self::GSI_FEED)->kwhere('fid=:v')
      ->expressValue([':v'=>$feed_id])->limit(0,$last)->query();    
 
-###delete
+### delete
     Dynamodb::table(self::$feed_name)->kwhere(['fid'=>$data['fid']])->delete();  

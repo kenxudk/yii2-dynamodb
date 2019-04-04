@@ -1,3 +1,4 @@
+<a href="https://996.icu"><img src="https://img.shields.io/badge/link-996.icu-red.svg" alt="996.icu" /></a>
 # xdk-dynamodb
  a simple dynamodb operation wrapper class（一个简单的dynamodb操作封装类）
 # description

@@ -303,7 +303,7 @@ class Dynamodb
     }
 
     /**
-     * 删除
+     * 批量删除
      * @param array $arrays
      * @return bool
      * User: ken xu

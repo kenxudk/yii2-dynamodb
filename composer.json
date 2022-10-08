@@ -1,6 +1,25 @@
 {
-
+    "name": "xdkken/dynamodb",
+    "description": "Logical query of aws dynamodb",
+    "type": "library",
+    "keywords": [
+        "dynamodb", "aws"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "xdk",
+            "email": "3332794598@qq.com",
+            "homepage": "https://github.com/3332794598"
+        }
+    ],
     "require": {
+        "php": ">=7.0",
         "aws/aws-sdk-php": "^3.238"
+    },
+    "autoload": {
+        "psr-4": {
+            "xdkken\\dynamodb\\": "src/"
+        }
     }
 }

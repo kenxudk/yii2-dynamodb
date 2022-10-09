@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "kenxudk\\dynamodb\\": "src/"
+            "kenxudk\\": "src/"
         }
     }
 }

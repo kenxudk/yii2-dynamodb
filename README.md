@@ -1,7 +1,7 @@
 <a href="https://996.icu"><img src="https://img.shields.io/badge/link-996.icu-red.svg" alt="996.icu" /></a>
 # yii2-dynamodb
- a simple dynamodb operation wrapper class
- （一个简单的aws dynamodb操作封装类）
+A aws dynamodb add, delete, update, query package
+ （一个简单的aws dynamodb 链路操作封装类）
 # composer
 ```
 composer require kenxudk/yii2-dynamodb

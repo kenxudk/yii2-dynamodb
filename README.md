@@ -1,6 +1,7 @@
 <a href="https://996.icu"><img src="https://img.shields.io/badge/link-996.icu-red.svg" alt="996.icu" /></a>
-# xdk-dynamodb
- a simple dynamodb operation wrapper class（一个简单的dynamodb操作封装类）
+# yii2-dynamodb
+ a simple dynamodb operation wrapper class
+ （一个简单的aws dynamodb操作封装类）
 # description
 
  Because I used the YII2 framework, the log is yii, and the AWS package is placed under the vender. The configuration file for this class is in params.php. as follows:
@@ -15,8 +16,10 @@
 	    ],
  # simple use
  
+ TABLE_NAME is the name of the table you are using, TABLE_INDEX is currently using the index name 
+（说明TABLE_NAME是你使用表名，TABLE_INDEX当前使用的索引名称）
  ### add
-    $result = Dynamodb::table($table_name)->insert($data);
+    $result = Dynamodb::table(TABLE_NAME)->insert($data);
  ### update
     $expressValue = $updata = $expressName = [];
     $i = 0;
@@ -28,20 +31,20 @@
         $expressValue[$v] = $value;
         $i++;
     }
-     $result = KmDynamodb::table($table_name)->expressValue($expressValue)->kwhere(['fid'=>$data['fid']])->expressName($expressName)->update($updata);
+     $result = KmDynamodb::table(TABLE_NAME)->expressValue($expressValue)->kWhere(['pk_id'=>$primary_key])->expressName($expressName)->update($updata);
 
 ### select
 #### Get multiples with the primary key (batchGetItem)
         $keys = [];
-        foreach ($feed_id_list as $feed_id) {
-            $keys[] = ['fid' => $feed_id];
+        foreach ($primary_keys as $primary_key) {
+            $keys[] = ['kid' => $primary_key];
         }
-        $feeds = Dynamodb::table(self::$feed_name)->kwhere($keys)->order(true)->ones(); 
-####    Get one with the primary key (getItem)
-       Dynamodb::table(self::$like_name)->kwhere(['lid'=>$lid])->one();
-#### (query)
-     Dynamodb::table(self::$comment_name,self::GSI_FEED)->kwhere('fid=:v')
-     ->expressValue([':v'=>$feed_id])->limit(0,$last)->query();    
+        $feeds = Dynamodb::table(TABLE_NAME)->kWhere($keys)->order(true)->ones(); 
+#### Get one with the primary key (getItem)
+       Dynamodb::table(TABLE_NAME)->kWhere(['kid'=>$primary_key])->one();
+#### query
+     Dynamodb::table(TABLE_NAME,TABLE_INDEX)->kWhere('kid=:v')
+     ->expressValue([':v'=>$primary_key])->limit(10,[])->query();    
 
 ### delete
-    Dynamodb::table(self::$feed_name)->kwhere(['fid'=>$data['fid']])->delete();  
+    Dynamodb::table(TABLE_NAME)->kWhere(['kid'=>$primary_key])->delete();  

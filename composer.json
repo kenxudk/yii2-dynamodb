@@ -1,14 +1,14 @@
 {
-    "name": "xdkken/dynamodb",
+    "name": "kenxu/yii2-dynamodb",
     "description": "Logical query of aws dynamodb",
     "type": "library",
     "keywords": [
-        "dynamodb", "aws"
+        "dynamodb", "aws", "yii2"
     ],
     "license": "MIT",
     "authors": [
         {
-            "name": "xdk",
+            "name": "ken xu",
             "email": "3332794598@qq.com",
             "homepage": "https://github.com/3332794598"
         }
@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "xdkken\\dynamodb\\": "src/"
+            "kenxu\\dynamodb\\": "src/"
         }
     }
 }

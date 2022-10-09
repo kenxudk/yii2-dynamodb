@@ -30,10 +30,10 @@ class Dynamodb
         if (self::$_client instanceof self) {
             return self::$_client;
         }
-        $key  =    Yii::$app->params["aws"]["key"];
-        $secret  = Yii::$app->params["aws"]["secret"];
-        $region  = Yii::$app->params["aws"]["region"];
-        $version = Yii::$app->params["aws"]["version"];
+        $key     = Yii::$app->params["aws"]["key"] ?? '';
+        $secret  = Yii::$app->params["aws"]["secret"] ?? '';
+        $region  = Yii::$app->params["aws"]["region"] ?? '';
+        $version = Yii::$app->params["aws"]["version"] ?? '';
         return  new DynamoDbClient([
             // 'endpoint'   => 'http://localhost:8000',
             'region'   => $region,

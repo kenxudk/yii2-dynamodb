@@ -1,6 +1,6 @@
 <a href="https://996.icu"><img src="https://img.shields.io/badge/link-996.icu-red.svg" alt="996.icu" /></a>
 # yii2-dynamodb
-A aws dynamodb add, delete, update, query package
+A aws dynamodb insert, delete, update, select package
  （一个简单的aws dynamodb 链路操作封装类）
 # composer
 ```

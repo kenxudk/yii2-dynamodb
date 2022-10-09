@@ -1,5 +1,5 @@
 {
-    "name": "kenxu/yii2-dynamodb",
+    "name": "kenxudk/yii2-dynamodb",
     "description": "Logical query of aws dynamodb",
     "type": "library",
     "keywords": [
@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "kenxu\\dynamodb\\": "src/"
+            "kenxudk\\dynamodb\\": "src/"
         }
     }
 }

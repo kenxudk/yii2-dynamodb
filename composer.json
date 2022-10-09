@@ -3,7 +3,7 @@
     "description": "Logical query of aws dynamodb",
     "type": "library",
     "keywords": [
-        "dynamodb", "aws", "yii2"
+        "dynamodb", "aws", "yii2","php"
     ],
     "license": "MIT",
     "authors": [

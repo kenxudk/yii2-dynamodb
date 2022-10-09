@@ -2,6 +2,10 @@
 # yii2-dynamodb
  a simple dynamodb operation wrapper class
  （一个简单的aws dynamodb操作封装类）
+# composer
+```
+composer require kenxudk/yii2-dynamodb
+```
 # description
 
  Because I used the YII2 framework, the log is yii, and the AWS package is placed under the vender. The configuration file for this class is in params.php. as follows:

@@ -1,5 +1,5 @@
 <?php
-namespace src;
+namespace kenxudk;
 use Yii;
 use Aws\DynamoDb\Exception\DynamoDbException;
 use Aws\DynamoDb\Marshaler;

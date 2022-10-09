@@ -1,5 +1,5 @@
 <?php
-use src\Dynamodb;
+use kenxudk\Dynamodb;
 class demo{
     /*简单的点赞表例子
      * Like:
